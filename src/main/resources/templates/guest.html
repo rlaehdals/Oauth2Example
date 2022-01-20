@@ -1,0 +1,17 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>Guest Page</title>
+
+<div class="container">
+    <div th:if="${user}!=null">
+        <ul>
+            <li>guest: Username = <span th:text="${user.name}"></span></li>
+            <li>guest: UserEmail = <span th:text="${user.email}"></span></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

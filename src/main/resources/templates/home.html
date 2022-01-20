@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>Hello</title>
+
+<body>
+<div class="container">
+    <div>
+        <a th:href="@{/oauth2/authorization/google}">google 로그인</a>
+        <a th:href="@{/logout}">로그 아웃</a>
+    </div>
+</div> <!-- /container -->
+
+<div class="container">
+    <div th:if="${user}!=null">
+        <ul>
+            <li>Username = <span th:text="${user.name}"></span></li>
+            <li>UserEmail = <span th:text="${user.email}"></span></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

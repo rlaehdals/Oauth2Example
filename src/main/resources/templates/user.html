@@ -1,0 +1,19 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<title>User Page</title>
+
+<body>
+
+<div class="container">
+    <div th:if="${user}!=null">
+        <ul>
+            <li>User: Username = <span th:text="${user.name}"></span></li>
+            <li>User: UserEmail = <span th:text="${user.email}"></span></li>
+        </ul>
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -1,21 +1,18 @@
 package com.example.oauth2.dto;
 
-import lombok.Getter;
+import lombok.AllArgsConstructor;
+import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import java.io.Serializable;
 
-@Getter
 @NoArgsConstructor
+@AllArgsConstructor
+@Data
 public class SessionUser implements Serializable {
 
-    private String name;
-    private String email;
-    private String picture;
+    public String name;
+    public String email;
+    public String picture;
 
-    public SessionUser(String name, String email, String picture) {
-        this.name = name;
-        this.email = email;
-        this.picture = picture;
-    }
 }
