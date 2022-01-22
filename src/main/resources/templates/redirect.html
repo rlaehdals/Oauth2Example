@@ -3,15 +3,16 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Guest Page</title>
+    <title>redirect Page</title>
 </head>
+<h1> Redirect Page </h1>
 
-<h1> Guest Page </h1>
+
 <div class="container">
     <div th:if="${user}!=null">
         <ul>
-            <li>guest: Username = <span th:text="${user.name}"></span></li>
-            <li>guest: UserEmail = <span th:text="${user.email}"></span></li>
+            <li>Username = <span th:text="${user.name}"></span></li>
+            <li>UserEmail = <span th:text="${user.email}"></span></li>
         </ul>
     </div>
 

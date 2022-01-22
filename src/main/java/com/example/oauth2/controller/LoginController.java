@@ -43,4 +43,18 @@ public class LoginController {
         return "/guest";
     }
 
+    @GetMapping("/redirect")
+    public String redirect(Model model){
+        SessionUser loginUser = (SessionUser) httpSession.getAttribute("loginUser");
+        model.addAttribute("user",loginUser);
+        return "/redirect";
+    }
+
+    @GetMapping("/denied")
+    public String denied(Model model){
+        SessionUser loginUser = (SessionUser) httpSession.getAttribute("loginUser");
+        model.addAttribute("user",loginUser);
+        return "/denied";
+    }
+
 }
